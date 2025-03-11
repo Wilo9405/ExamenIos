@@ -1,24 +1,16 @@
-//
-//  ContentView.swift
-//  Examen1
-//
-//  Created by Wilson Perez on 11/03/25.
-//
+
 
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject private var viewModel = ProductoViewModel()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationView {
+            ProductoListView(viewModel: viewModel)
         }
-        .padding()
     }
 }
-
 #Preview {
     ContentView()
 }
