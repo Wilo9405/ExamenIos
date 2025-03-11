@@ -1,9 +1,3 @@
-//
-//  ProductoDetalleView.swift
-//  Examen1
-//
-//  Created by Wilson Perez on 11/03/25.
-//
 
 import SwiftUI
 
@@ -15,6 +9,8 @@ struct ProductoDetalleView: View {
                 VStack(alignment: .leading) {
                     AsyncImage(url: URL(string: producto.image)) { image in
                         image.resizable()
+                            .frame(width: 200, height: 200)
+                            
                     } placeholder: {
                         ProgressView()
                     }
